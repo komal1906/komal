@@ -1,0 +1,31 @@
+package com.lab.practice;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+
+public class EmployeeHash {	
+	public static void main(String args[])
+	{ 
+		int i;
+	
+		HashMap<Integer,Employee> has=new HashMap<Integer,Employee>();
+		System.out.println("enter the employees u want to enter");
+		Scanner input=new Scanner(System.in);
+		int a=input.nextInt();
+		System.out.println("enter the employee");
+		for(i=0;i<a;i++) 
+		{
+			/*Scanner input1=new Scanner(System.in);
+			int a1=input1.nextInt();*/
+			Employee emp1=new Employee(1,"komal",1500,"Manager","Scheme c");
+			has.put(1,emp1);
+			
+			
+		} 
+		 for(HashMap.Entry<Integer, Employee> entry:has.entrySet()){    
+		        int key=entry.getKey();  
+		       Employee b=entry.getValue(); 
+		       System.out.println(key+" Details:");  
+		        System.out.println(b.getEmpId()+" "+b.getEmpName()+" "+b.getEmpSalary()+" "+b.getEmpDestination()+" "+b.getEmpInsurance());  
+	}
+}}
